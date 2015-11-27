@@ -1,0 +1,2 @@
+# CompilatorScript
+Compilator for varScript.
