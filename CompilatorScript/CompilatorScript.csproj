@@ -41,11 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeProcessor.cs" />
-    <Compile Include="InputReader.cs" />
+    <Compile Include="Core\CodeProcessor.cs" />
+    <Compile Include="Core\RegexPatterns.cs" />
+    <Compile Include="Core\InputReader.cs" />
+    <Compile Include="Models\Array.cs" />
+    <Compile Include="Models\Method.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Variable.cs" />
+    <Compile Include="Validators\BooleanValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

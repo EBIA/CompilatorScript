@@ -1,40 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompilatorScript
 {
-    using System.CodeDom;
-
-    class Variable<T>
+    public class Variable<T>
     {
-        private string name;
+        private string Name;
 
         private T value;
 
         private readonly Type type;
 
-        public Variable(string name, T value)
+        private bool valueAssigned;
+
+        public Variable(string name, T value, bool valueAssigned)
         {
             this.SetName(name);
             this.value = value;
-            this.type = value.GetType();
+            this.type = this.value.GetType();
+            this.valueAssigned = valueAssigned;
         }
 
-        public string Name
+        public string GetName()
         {
-            get
-            {
-                return this.name;
-            }
+            return Name;
+        }
+
+        public bool IsAssigned()
+        {
+            return this.valueAssigned;
         }
 
         public T Value
         {
             get
             {
+                if (!this.valueAssigned)
+                {
+                    throw new ArgumentException("Variable not assigned !");
+                }
+
                 return this.value;
             }
         }
@@ -42,6 +46,12 @@ namespace CompilatorScript
         public void SetValue(T value)
         {
             // TODO: Add some validations
+            this.valueAssigned = true;
+            if (value.GetType() != this.Type)
+            {
+                throw new FormatException();
+            }
+
             this.value = value;
         }
 
@@ -53,23 +63,9 @@ namespace CompilatorScript
             }
         }
 
-        public static Variable<T> operator +(Variable<T> o1, Variable<T> o2)
-        {
-            var firstValue = o1.value;
-            var secondValue = o2.value;
-
-            if (firstValue.GetType() != secondValue.GetType())
-            {
-                throw new InvalidOperationException("Cannot use \"+\" operator between 2 different types !");
-            }
-
-            //UNDER DEVELOPMENT ! NEED TO REMOVE (dynamic) CAST !
-            return (dynamic)firstValue + (dynamic)secondValue;
-        } 
-
         public override string ToString()
         {
-            return string.Format("Name - {0}\nValue - {1}\nType - {2}", this.name, this.value, this.type.Name);
+            return string.Format("Name - {0}\nValue - {1}\nType - {2}", this.GetName(), this.value, this.type.Name);
         }
 
         private void SetName(string givenValue)
@@ -79,7 +75,7 @@ namespace CompilatorScript
                 throw new ArgumentException("Name must consist of atleast 1 symbol !");
             }
 
-            this.name = givenValue;
+            this.Name = givenValue;
         }
 
     }

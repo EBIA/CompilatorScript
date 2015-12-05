@@ -1,0 +1,6 @@
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorScript\bin\Debug\CompilatorScript.exe.config
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorScript\bin\Debug\CompilatorScript.exe
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorScript\bin\Debug\CompilatorScript.pdb
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorScript\obj\Debug\CompilatorScript.csprojResolveAssemblyReference.cache
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorScript\obj\Debug\CompilatorScript.exe
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorScript\obj\Debug\CompilatorScript.pdb

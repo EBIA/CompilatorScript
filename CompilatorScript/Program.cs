@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CompilatorScript
 {
-    using System.Threading;
+    using CompilatorScript.Core;
 
     class Program
     {
@@ -14,12 +14,12 @@ namespace CompilatorScript
             // InputReader.ReadInput();
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("public static void Main()");
+            sb.AppendLine("void Main()");
             sb.AppendLine("{");
             sb.AppendLine("    integer a;");
             sb.AppendLine("    string asdsd;");
+            sb.AppendLine("    a = 2;");
             sb.AppendLine("    asdsd = \"TUPO\";");
-            sb.AppendLine("    a = 5;");
             sb.AppendLine("    if(a == 5)");
             sb.AppendLine("    {");
             sb.AppendLine("        Print(a);");
@@ -29,23 +29,16 @@ namespace CompilatorScript
             sb.AppendLine("        }");
             sb.AppendLine("        integer b = 10;");
             sb.AppendLine("        Print(b);");
+            sb.AppendLine("        Print(asdsd);");
             sb.AppendLine("    }");
-            sb.AppendLine("    integer asd = 1");
+            sb.AppendLine("    integer asd = 1;");
             sb.AppendLine("}");
 
             List<string> codeText = sb.ToString().Split('\n').ToList();
             codeText.RemoveAll(s => s.Length < 1);
-            
+
             CodeProcessor.ProcessCode(codeText);
 
-            //Variable<string> a = new Variable<string>("SomeVar", "Hello ");
-            //Variable<string> b = new Variable<string>("SomeOtherVar", "World");
-
-            //Console.WriteLine(a.GetValue().GetType().Name);
-
-            //var asd = a + b;
-
-            //Console.WriteLine(asd);
         }
     }
 }

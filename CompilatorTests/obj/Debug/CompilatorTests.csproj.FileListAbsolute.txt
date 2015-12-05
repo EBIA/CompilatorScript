@@ -1,0 +1,7 @@
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\obj\Debug\CompilatorTests.csprojResolveAssemblyReference.cache
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\bin\Debug\CompilatorTests.dll
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\bin\Debug\CompilatorTests.pdb
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\bin\Debug\CompilatorScript.exe
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\bin\Debug\CompilatorScript.pdb
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\obj\Debug\CompilatorTests.dll
+C:\Users\Ivo\Desktop\EBIA\CompilatorScript\CompilatorScript\CompilatorTests\obj\Debug\CompilatorTests.pdb
